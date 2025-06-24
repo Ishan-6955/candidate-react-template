@@ -16,7 +16,7 @@ jobs:
       # Step 1: Checkout the candidate's code.
       # 'uses: actions/checkout@v3' is a pre-built action that checks out the repository's code.
       - name: 1. Checkout Candidate Solution
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # We check it out into a subdirectory named 'solution' to match our test's import path.
           path: solution
