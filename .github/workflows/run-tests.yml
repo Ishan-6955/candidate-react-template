@@ -23,7 +23,7 @@ jobs:
 
       # Step 2: Checkout the private test suite.
       - name: 2. Checkout Private Tests
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Specify the private repository to check out.
           # IMPORTANT: Replace 'YourGitHubUsername' with your actual GitHub username.
@@ -38,7 +38,7 @@ jobs:
 
       # Step 3: Set up the Node.js environment for the entire job.
       - name: 3. Setup Node.js Environment
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           # Specify the version of Node.js to use.
           node-version: '18'
@@ -86,7 +86,7 @@ jobs:
       - name: 8. Upload Results Artifact
         # This step will also run even if tests failed, allowing us to see partial results.
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           # The name of the artifact that will appear in the GitHub UI.
           name: test-results
